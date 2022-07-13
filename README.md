@@ -37,28 +37,27 @@ Bắt đầu sử dụng thôi:
 
 |Tool          |File types                |Description       |How to use - Demo  |
 |--------------|--------------------------|------------------|-------------------|
-| [stegoVeritas](https://github.com/bannsec/stegoVeritas) | Images (JPG, PNG, GIF, TIFF, BMP) | A wide variety of simple and advanced checks. Check out `stegoveritas.py -h`. Checks metadata, creates many transformed images and saves them to a directory, Brute forces LSB, ... |[demo]()|
-| [zsteg](https://github.com/zed-0xff/zsteg) | Images (PNG, BMP) | Detects various LSB stego, also openstego and the [Camouflage tool](http://camouflage.unfiction.com/) |[demo]()|
-| [stegdetect](http://old-releases.ubuntu.com/ubuntu/pool/universe/s/stegdetect) | Images (JPG) | Performs statistical tests to find if a stego tool was used (jsteg, outguess, jphide, ...). Check out `man stegdetect` for details. |[demo]()|
-| [stegbreak](https://linux.die.net/man/1/stegbreak) | Images (JPG) | Brute force cracker for JPG images. Claims it can crack `outguess`, `jphide` and `jsteg`. | [demo]()|
+| [stegoVeritas](https://github.com/bannsec/stegoVeritas) | Images (JPG, PNG, GIF, TIFF, BMP) | A wide variety of simple and advanced checks. Check out `stegoveritas.py -h`. Checks metadata, creates many transformed images and saves them to a directory, Brute forces LSB, ... |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#stegoveritas)|
+| [zsteg](https://github.com/zed-0xff/zsteg) | Images (PNG, BMP) | Detects various LSB stego, also openstego and the [Camouflage tool](http://camouflage.unfiction.com/) |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#zsteg)|
+| [stegdetect](http://old-releases.ubuntu.com/ubuntu/pool/universe/s/stegdetect) | Images (JPG) | Performs statistical tests to find if a stego tool was used (jsteg, outguess, jphide, ...). Check out `man stegdetect` for details. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#stegdetect)|
+| [stegbreak](https://linux.die.net/man/1/stegbreak) | Images (JPG) | Brute force cracker for JPG images. Claims it can crack `outguess`, `jphide` and `jsteg`. | [demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#stegbreak)|
 
 ##  Tools actually doing steganography
 
 |Tool          |File types                |Description       |How to use- Demo  |
 |--------------|--------------------------|------------------|------------------|
-| [AudioStego](https://github.com/danielcardeenas/AudioStego) | Audio (MP3 / WAV) | Details on how it works are in this [blog post](https://danielcardeenas.github.io/audiostego.html) |[demo]()| 
-| [jphide/jpseek](http://linux01.gwdg.de/~alatham/stego.html) | Image (JPG) | Pretty old tool from [here](http://linux01.gwdg.de/~alatham/stego.html). Here, the version from [here](https://github.com/mmayfield1/SSAK) is installed since the original one crashed all the time. It prompts for a passphrase interactively! | [demo]()|
-| [jsteg](https://github.com/lukechampine/jsteg) | Image (JPG) | LSB stego tool. Does not encrypt the message. |[demo]()|
-| [mp3stego](http://www.petitcolas.net/steganography/mp3stego/) | Audio (MP3) | Old program. Encrypts and then hides a message (3DES encryption!). Windows tool running in Wine. Requires WAV input (may throw errors for certain WAV files. what works for me is e.g.: `ffmpeg -i audio.mp3 -flags bitexact audio.wav`). Important: use absolute path only! |[demo]() |
-| [openstego](https://github.com/syvaidya/openstego) | Images (PNG) | Various LSB stego algorithms (check out this [blog](http://syvaidya.blogspot.de/)). Still maintained. |[demo]() | 
-| [outguess](https://packages.debian.org/sid/utils/outguess) | Images (JPG) | Uses "redundant bits" to hide data. Comes in two versions: old=`outguess-0.13` taken from [here](https://github.com/mmayfield1/SSAK) and new=`outguess` from the package repos. To recover, you must use the one used for hiding. |[demo]()|
-| [spectrology](https://github.com/solusipse/spectrology) | Audio (WAV) | Encodes an image in the spectrogram of an audio file. |[demo]() |
-| [stegano](https://github.com/cedricbonhomme/Stegano) | Images (PNG) | Hides data with various (LSB-based) methods. Provides also some screening tools. |[demo]()|
-| [Steghide](http://steghide.sourceforge.net/) | Images (JPG, BMP) and Audio (WAV, AU) | Versatile and mature tool to encrypt and hide data. |[demo]()|
-| [cloackedpixel](https://github.com/livz/cloacked-pixel) | Images (PNG) | LSB stego tool for images |[demo]()|
-| [LSBSteg](https://github.com/RobinDavid/LSB-Steganography) | Images (PNG, BMP, ...) in uncompressed formats | Simple LSB tools with very nice and readable Python code |[demo]()|
-| [f5](https://github.com/jackfengji/f5-steganography) | Images (JPG) | F5 Steganographic Algorithm with detailed info on the process |[demo]()|
-| [stegpy](https://github.com/dhsdshdhk/stegpy) | Images (PNG, GIF, BMP, WebP) and Audio (WAV) | Simple steganography program based on the LSB method |[demo]()|
+| [AudioStego](https://github.com/danielcardeenas/AudioStego) | Audio (MP3 / WAV) | Details on how it works are in this [blog post](https://danielcardeenas.github.io/audiostego.html) |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#audiostego)| 
+| [jphide/jpseek](http://linux01.gwdg.de/~alatham/stego.html) | Image (JPG) | Pretty old tool from [here](http://linux01.gwdg.de/~alatham/stego.html). Here, the version from [here](https://github.com/mmayfield1/SSAK) is installed since the original one crashed all the time. It prompts for a passphrase interactively! | [demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#jphidejpseek)|
+| [jsteg](https://github.com/lukechampine/jsteg) | Image (JPG) | LSB stego tool. Does not encrypt the message. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#jsteg)|
+| [mp3stego](http://www.petitcolas.net/steganography/mp3stego/) | Audio (MP3) | Old program. Encrypts and then hides a message (3DES encryption!). Windows tool running in Wine. Requires WAV input (may throw errors for certain WAV files. what works for me is e.g.: `ffmpeg -i audio.mp3 -flags bitexact audio.wav`). Important: use absolute path only! |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#mp3stego) |
+| [openstego](https://github.com/syvaidya/openstego) | Images (PNG) | Various LSB stego algorithms (check out this [blog](http://syvaidya.blogspot.de/)). Still maintained. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#openstego) | 
+| [outguess](https://packages.debian.org/sid/utils/outguess) | Images (JPG) | Uses "redundant bits" to hide data. Comes in two versions: old=`outguess-0.13` taken from [here](https://github.com/mmayfield1/SSAK) and new=`outguess` from the package repos. To recover, you must use the one used for hiding. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#outguess)|
+| [stegano](https://github.com/cedricbonhomme/Stegano) | Images (PNG) | Hides data with various (LSB-based) methods. Provides also some screening tools. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#stegano)|
+| [Steghide](http://steghide.sourceforge.net/) | Images (JPG, BMP) and Audio (WAV, AU) | Versatile and mature tool to encrypt and hide data. |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#steghide)|
+| [cloackedpixel](https://github.com/livz/cloacked-pixel) | Images (PNG) | LSB stego tool for images |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#cloackedpixel)|
+| [LSBSteg](https://github.com/RobinDavid/LSB-Steganography) | Images (PNG, BMP, ...) in uncompressed formats | Simple LSB tools with very nice and readable Python code |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#lsbsteg)|
+| [f5](https://github.com/jackfengji/f5-steganography) | Images (JPG) | F5 Steganographic Algorithm with detailed info on the process |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#f5)|
+| [stegpy](https://github.com/dhsdshdhk/stegpy) | Images (PNG, GIF, BMP, WebP) and Audio (WAV) | Simple steganography program based on the LSB method |[demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#stegpy)|
 
 ## Steganography GUI tools
 
