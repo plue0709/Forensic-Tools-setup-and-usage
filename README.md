@@ -3,6 +3,34 @@
 [stego-toolkit(github)](https://github.com/DominicBreuker/stego-toolkit)
 
 Để cài được bộ tool này trước hết cần có docker. Link cài đặt docker: [đây](https://docs.docker.com/engine/install/debian/)
+```
+$sudo apt-get remove docker docker-engine docker.io containerd runc
+$sudo apt-get update
+$sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+$sudo mkdir -p /etc/apt/keyrings
+$curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+$echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+$sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+$sudo docker run hello-world
+```
+
+Nếu có [lỗi này](https://unix.stackexchange.com/questions/630643/how-to-install-docker-ce-in-kali-linux) lúc apt-get update thì sửa bằng cách chạy dòng lệnh dưới đây:
+```
+cd /etc/apt/sources.list.d/
+sudo chmod 777 *
+```
+
+Sau đó trong file docker.list sửa **kali-rolling** thành **buster**
+và chạy lại
+
 
 Sau khi cài xong docker thì clone respo về, tại thư mục clone ta làm theo hướng dẫn của tác giả:
 
@@ -72,5 +100,5 @@ Bắt đầu sử dụng thôi:
 | [DeepSound](http://jpinsoft.net/deepsound) | Audio (MP3, WAV) | Audio stego tool trusted by Mr. Robot himself. Windows tool running in wine (very hacky, requires VNC and runs in virtual desktop, MP3 broken due to missing DLL!) | [demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#deepsound) |
 | [cloackedpixel-analyse](https://github.com/livz/cloacked-pixel) | Images (PNG) | LSB stego visualization for PNGs - use it to detect suspiciously random LSB values in images (values close to 0.5 may indicate encrypted data is embedded) | [demo](https://github.com/plue0709/Forensic-Tools-setup-and-useage-/blob/main/How-to-use-and-demo.md#deepsound) |
 
-# Còn chần chờ gì mà không cho một sao đi [cho một sao :)](https://github.com/plue0709/Forensic-Tools-setup-and-useage-)
+> Còn chần chờ gì mà không cho một sao đi [cho một sao :)](https://github.com/plue0709/Forensic-Tools-setup-and-useage-)
 
