@@ -409,9 +409,13 @@ File _flag.txt succesfully extracted from _ORIGINAL.png
 ![image](https://user-images.githubusercontent.com/80806913/178820936-7d98c9cf-16fd-40f7-9f41-1318b744a89a.png)
 
 ```
-$ sudo ./scripts/start_ssh.sh                                                                                                                                                           1 ⨯
-Changing root password to dc8af4c04e4fbdf7e1733d10
+$ sudp ./bin/run.sh
+$ sudo ./scripts/start_ssh.sh                                                                                                                                       
+
+root@28b834d1450f:/data# ./start_ssh.sh 
+Changing root password to e1c42f53562c072e1bcf05e2
 Starting ssh server
+[ ok ] Starting OpenBSD Secure Shell server: sshd.
 
 
 -------------------------------------------------
@@ -420,18 +424,79 @@ Starting ssh server
 
 SSH server started and ready for X11 forwarding:
         => connect via 'ssh -X -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@localhost'
-        => Password is: 'dc8af4c04e4fbdf7e1733d10'
+        => Password is: 'e1c42f53562c072e1bcf05e2'
 ```
-**Ngay lúc làm cái này xong thì thử mãi không đăng nhập được, tắt máy ảo đi bật lại thì máy áo ko cho vào luôn :)) sẽ update tiếp phần GUI**
+```
+$ ssh -X -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no root@localhost
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+root@localhost's password: 
+Linux 28b834d1450f 5.16.0-kali7-amd64 #1 SMP PREEMPT Debian 5.16.18-1kali1 (2022-04-01) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+/usr/bin/xauth:  file /root/.Xauthority does not exist
+root@28b834d1450f:~#
+```
+**chạy tool thôi**
+
 ### Steg
 ```
 $steg
 ```
 
+![image](https://user-images.githubusercontent.com/80806913/178917393-fce8a410-0008-42d8-8a10-c3bda03c6ca6.png)
 
+### steganabara
+```
+$steganabara
+```
 
+![image](https://user-images.githubusercontent.com/80806913/178919007-fb842b41-9828-4ea5-99fe-6faf4006d96d.png)
 
+### Stegsolve
+```
+$stegsolve
+```
 
+![image](https://user-images.githubusercontent.com/80806913/178919461-84b20aa8-dd04-47ee-ba7e-38cfee0d4280.png)
+
+### SonicVisualiser
+```
+$sonic-visualiser
+```
+
+![image](https://user-images.githubusercontent.com/80806913/178920346-42af690e-b4fe-4ba5-b798-df56bb54ec8f.png)
+
+### Stegosuite
+```
+$stegosuite
+```
+
+![image](https://user-images.githubusercontent.com/80806913/178920574-8b8e62a7-bb9a-4e10-9a6c-0d064300b418.png)
+
+### OpenPuff
+```
+$openpuff
+```
+
+![image](https://user-images.githubusercontent.com/80806913/178920651-8cf8e98d-0e6b-4de3-9e0b-7bd88eab2f7c.png)
+
+### DeepSound
+
+DeepSound cần .NET framework 4.0, tải ở [đây](https://deepsound.en.uptodown.com/windows). Cài đặt và chạy
+
+![image](https://user-images.githubusercontent.com/80806913/178921170-b47d8de6-a57e-437a-b8d3-c515942ea0d9.png)
+
+### cloackedpixel-analyse
+```
+$cloackedpixel-analyse image.png
+```
+
+**END**
 
 
 
