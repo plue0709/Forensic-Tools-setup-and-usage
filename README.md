@@ -1,4 +1,4 @@
-# Forensic-Tools-setup-and-useage
+# Forensic-Tools-setup-and-usage
 
 [stego-toolkit(github)](https://github.com/DominicBreuker/stego-toolkit)
 
